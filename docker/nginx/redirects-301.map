@@ -1,5 +1,4 @@
 ~^(.*/[^.^#^/]*[^/])$ $1/;
-~^/1.7/.+ /1.7/;
 ~^/1.8/.+ /1.8/;
 ~^/service-docs/(.*)$ /services/$1;
 ~/[0-9]+\.[0-9]+/release-notes/version-policy/ /version-policy/;
