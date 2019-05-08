@@ -5,7 +5,7 @@ title: Running DC/OS on Packet
 navigationTitle: Packet
 menuWeight: 50
 oss: true
-model: /1.12/installing/evaluation/include/data.yml
+model: /1.12/installing/data.yml
 render: mustache
 ---
 
@@ -91,7 +91,7 @@ You can create a DC/OS cluster on Packet bare metal using Terraform. The include
 
     Figure 1. "Terraform apply" output
 
-You may need to wait a few minutes from this point for all the DC/OS services to become active and the control panel available on the master node. After 15 or 20 minutes, see the [troubleshooting](installing/troubleshooting/) documentation.
+You may need to wait a few minutes from this point for all the DC/OS services to become active and the control panel available on the master node. After 15 or 20 minutes, see the [troubleshooting](/{{ model.folder_version }}/installing/troubleshooting/) documentation.
 
 # Launch DC/OS
 Launch the DC/OS web interface by entering the Mesos master IP address:
