@@ -257,7 +257,7 @@ Custom installation checks that are added to the default check configuration pro
     - `cmd` - Specify an array of health check command strings
     - `timeout` - Specify how long to wait, in seconds, before assuming the check failed. A check that times out is assumed to have a status of `3 (UNKNOWN)`
 
-For more information on how these custom checks are used, see the [examples](/1.12/installing/ent/custom/configuration/examples/#custom-checks) and [Node and Cluster Health Check](/1.12/installing/ent/custom/node-cluster-health-check/) documentation.
+For more information on how these custom checks are used, see the [examples](/1.12/installing/ent/custom/configuration/examples/#custom-checks) and [Node and Cluster Health Check](/1.12/installing/production/deploying-dcos/configuration/examples/#custom-checks) documentation.
 
 
 ### dcos_audit_logging [enterprise type="inline" size="small" /]
@@ -360,7 +360,7 @@ The type of storage backend to use for Exhibitor. You can use internal DC/OS sto
 
 *   `exhibitor_storage_backend: static`
     The Exhibitor storage backend is managed internally within your cluster.
-<p class="message--note"><strong>NOTE: </strong>If <a href="https://docs.mesosphere.com/1.12/installing/production/advanced-configuration/configuration-reference/#master-discovery">master_discovery</a> is set to `master_http_loadbalancer`, then exhibitor_storage_backend cannot be set to `static`.</p>
+<p class="message--note"><strong>NOTE: </strong>If <a href="/1.12/installing/production/advanced-configuration/configuration-reference/#master-discovery">master_discovery</a> is set to `master_http_loadbalancer`, then exhibitor_storage_backend cannot be set to `static`.</p>
 
 *   `exhibitor_storage_backend: zookeeper`
     The ZooKeeper instance for shared storage. If you use a ZooKeeper instance to bootstrap Exhibitor, this ZooKeeper instance must be separate from your DC/OS cluster. You must have at least 3 ZooKeeper instances running at all times for high availability. If you specify `zookeeper`, you must also specify these parameters.
@@ -612,7 +612,7 @@ Indicates whether to enable the DC/OS proxy.
 * `use_proxy: 'false'` Do not configure DC/OS [components](/1.12/overview/architecture/components/) to use a custom proxy. This is the default value.
 * `use_proxy: 'true'` Configure DC/OS [components](/1.12/overview/architecture/components/) to use a custom proxy. If you specify `use_proxy: 'true'`, you can also specify these parameters:
 
-  <p class="message--note"><strong>NOTE: </strong>The specified proxies must be resolvable from the provided list of <a href="https://docs.mesosphere.com/1.12/installing/production/advanced-configuration/configuration-reference/#resolvers">resolvers.</a></p>
+  <p class="message--note"><strong>NOTE: </strong>The specified proxies must be resolvable from the provided list of <a href="/1.12/installing/production/advanced-configuration/configuration-reference/#resolvers">resolvers.</a></p>
 
     * `http_proxy: http://<user>:<pass>@<proxy_host>:<http_proxy_port>` The HTTP proxy.
     * `https_proxy: https://<user>:<pass>@<proxy_host>:<https_proxy_port>` The HTTPS proxy.

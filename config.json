@@ -5,9 +5,7 @@
             "services/beta-storage/0.3.1-beta/**",
             "services/beta-storage/0.3.2-beta/**"
         ],
-        "DO_NOT_INDEX": [
-            "^1.13"
-        ]
+        "DO_NOT_INDEX": []
     },
     "staging": {
         "DO_NOT_BUILD": [
@@ -96,6 +94,17 @@
             "services/hdfs/2.0.3-2.6.0-cdh5.11.0/**",
             "services/hdfs/2.0.4-2.6.0-cdh5.11.0/**",
             "services/beta-cassandra/**",
+            "services/kubernetes/2.0.1-1.12.2/**",
+            "services/kubernetes/2.0.0-1.12.1/**",
+            "services/kubernetes/1.0.3-1.9.7/**",
+            "services/kubernetes/1.2.0-1.10.5/**",
+            "services/kubernetes/1.2.1-1.10.6/**",
+            "services/kubernetes/1.1.1-1.10.4/**",
+            "services/kubernetes/1.0.2-1.9.6/**",
+            "services/kubernetes/1.0.1-1.9.4/**",
+            "services/kubernetes/1.1.0-1.10.3/**",
+            "services/kubernetes/1.2.2-1.10.7/**",
+            "services/kubernetes/1.0.0-1.9.3/**",
             "services/beta-kubernetes/**",
             "services/dse/v2.0.0-5.1.2/**",
             "services/dse/2.0.2-5.1.2/**",

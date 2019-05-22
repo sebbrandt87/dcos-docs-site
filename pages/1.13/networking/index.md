@@ -4,11 +4,10 @@ navigationTitle:  Networking
 title: Networking
 menuWeight: 70
 excerpt: Understanding the DC/OS networking stack
-
 enterprise: false
 ---
 
-<!-- The source repo for this topic is https://github.com/dcos/dcos-docs-site -->
+
 
 The DC/OS network stack provides
 - [IP connectivity to containers](#IP-connectivity)
@@ -85,16 +84,16 @@ While both Marathon-LB and Edge-LB are designed for handling north-south ingress
 # <a name="cluster-id"></a>Specifying a cluster identity for network connections
 The DC/OS networking component (`dcos-net`) supports setting a **cluster identity** option on a node for DC/OS cluster. By enabling this feature, you can prevent nodes from communicating across clusters when a node is moved from one cluster to another. This feature ensures that the nodes from a cluster has a unique identifier and prevents unauthorized "cross-talk" between clusters.
 
-To use thw cluster identity feature:
+To use the cluster identity feature:
 1. Edit the `config.yaml` file for each node in the cluster to add the `dcos_net_cluster_identity` configuration parameter.
 
 1. Set the parameter value to `true` to enable the use of a cluster identity.
 
     For example:
 
-    <code>
+    ```bash
     "dcos_net_cluster_identity": "true"
-    </code>
+    ```
 
 If you are upgrading the nodes in the cluster to use the cluster identity functionality, the upgraded node (agent or master) with the flag enabled will not be able communicate with the `dcos-net` service on any nodes that have not been upgraded. Because of this behavior change, you might experience a minor disruption of networking operations during the upgrade until all nodes in the cluster are upgraded with this flag enabled.
 

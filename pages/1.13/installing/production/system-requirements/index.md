@@ -23,7 +23,7 @@ The hardware prerequisites are a single bootstrap node, Mesos master nodes, and 
 
 ## Cluster nodes
 
-The cluster nodes are designated Mesos masters and agents during installation. The supported operating systems and environments are listed on the [version policy page](https://docs.mesosphere.com/version-policy/).
+The cluster nodes are designated Mesos masters and agents during installation. The supported operating systems and environments are listed on the [version policy page](/version-policy/).
 
 DC/OS is installed to `/opt/mesosphere` on cluster nodes. `/opt/mesosphere` directory may be created prior to installing DC/OS, but it must be either an empty directory or a link to an empty directory. DC/OS may be installed on a separate volume mount by creating an empty directory on the mounted volume, creating a link at `/opt/mesosphere` that targets the empty directory, and then installing DC/OS.
 
@@ -55,7 +55,7 @@ There are many mixed workloads on the masters. Examples of mixed workloads on th
 - If separation of storage mount points is possible, the following storage mount points are recommended on the master node. These recommendations will optimize the performance of a busy DC/OS cluster by isolating the I/O of various services.
   | Directory Path | Description |
   |:-------------- | :---------- |
-  | _/var/lib/dcos_ | A majority of the I/O on the master nodes will occur within this directory structure. If you are planning a cluster with hundreds of nodes or intend to have a high rate of deploying and deleting workloads, isolating this directory to dedicated SSD storage on a separate partition is recommended. |
+  | _/var/lib/dcos_ | A majority of the I/O on the master nodes will occur within this directory structure. If you are planning a cluster with hundreds of nodes or intend to have a high rate of deploying and deleting workloads, isolating this directory to dedicated SSD storage on a separate device is recommended. |
 
 - Further breaking down this directory structure into individual mount points for specific services is recommended for a cluster which will grow to thousands of nodes.
 
@@ -149,7 +149,7 @@ High speed internet access is recommended for DC/OS installation. A minimum 10 M
 
 ### Docker
 
-Docker must be installed on all bootstrap and cluster nodes. The supported Docker versions are listed on [version policy page](https://docs.mesosphere.com/version-policy/).
+Docker must be installed on all bootstrap and cluster nodes. The supported Docker versions are listed on [version policy page](/version-policy/).
 
 **Recommendations**
 
